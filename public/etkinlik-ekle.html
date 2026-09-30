@@ -2,68 +2,125 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etkinlik Ekle</title>
+    <link rel="stylesheet" href="2321032034.css">
 </head>
 
 <body>
 
 <header>
-    <h1>Etkinlik Ekle</h1>
+    <h1>Kampüs Etkinlikleri</h1>
 
     <nav>
-        <a href="etkinlikler.html">Ana Sayfa</a> |
+        <a href="index.html">Ana Sayfa</a> |
         <a href="etkinlikler.html">Etkinlikler</a> |
-        <a href="etkinlik-ekle.html">Etkinlik Ekle</a>
+        <a href="etkinlik-ekle.html">Etkinlik Ekle</a> |
+        <a href="etkinlik-guncelle.html">Etkinlik Güncelle</a>
     </nav>
 </header>
 
 <main>
-
-    <form>
-
-        <p>
-            <label for="etkinlikAdi">Etkinlik Adı</label><br>
-            <input type="text" id="etkinlikAdi" name="etkinlikAdi">
-        </p>
+    <section>
+        <h2>Etkinlik Ekle</h2>
 
         <p>
-            <label for="kategori">Kategori</label><br>
-            <select id="kategori" name="kategori">
-                <option>Seminer</option>
-                <option>Atölye</option>
-                <option>Konferans</option>
-                <option>Spor</option>
-            </select>
+            Yeni bir kampüs etkinliği oluşturmak için
+            aşağıdaki formu doldurunuz.
         </p>
 
-        <p>
-            <label for="tarih">Tarih / Saat</label><br>
-            <input type="datetime-local" id="tarih" name="tarih">
-        </p>
+        <form action="#" method="get">
 
-        <p>
-            <label for="yer">Yer</label><br>
-            <input type="text" id="yer" name="yer">
-        </p>
+            <p>
+                <label for="etkinlik-adi">Etkinlik Adı</label><br>
+                <input
+                    type="text"
+                    id="etkinlik-adi"
+                    name="etkinlik-adi"
+                    placeholder="Etkinlik adını giriniz"
+                    required
+                >
+            </p>
 
-        <p>
-            <label for="aciklama">Açıklama</label><br>
-            <textarea id="aciklama" name="aciklama" rows="5" cols="40"></textarea>
-        </p>
+            <p>
+                <label for="kategori">Kategori</label><br>
+                <select id="kategori" name="kategori" required>
+                    <option value="">Seçiniz</option>
+                    <option value="seminer">Seminer</option>
+                    <option value="atolye">Atölye</option>
+                    <option value="soylesi">Söyleşi</option>
+                    <option value="konser">Konser</option>
+                    <option value="spor">Spor</option>
+                    <option value="diger">Diğer</option>
+                </select>
+            </p>
 
-        <p>
-            <label for="afis">Afiş</label><br>
-            <input type="file" id="afis" name="afis">
-        </p>
+            <p>
+                <label for="tarih">Tarih ve Saat</label><br>
+                <input
+                    type="datetime-local"
+                    id="tarih"
+                    name="tarih"
+                    required
+                >
+            </p>
 
-        <button type="submit">Kaydet</button>
+            <p>
+                <label for="yer">Etkinlik Yeri</label><br>
+                <input
+                    type="text"
+                    id="yer"
+                    name="yer"
+                    placeholder="Etkinliğin yapılacağı yeri giriniz"
+                    required
+                >
+            </p>
 
-    </form>
+            <p>
+                <label for="kontenjan">Kontenjan</label><br>
+                <input
+                    type="number"
+                    id="kontenjan"
+                    name="kontenjan"
+                    min="1"
+                    placeholder="Katılımcı sayısı"
+                    required
+                >
+            </p>
 
+            <p>
+                <label for="aciklama">Açıklama</label><br>
+                <textarea
+                    id="aciklama"
+                    name="aciklama"
+                    rows="5"
+                    placeholder="Etkinlik hakkında bilgi giriniz"
+                    required
+                ></textarea>
+            </p>
+
+            <p>
+                <label for="afis">Etkinlik Afişi</label><br>
+                <input
+                    type="file"
+                    id="afis"
+                    name="afis"
+                    accept="image/*"
+                >
+            </p>
+
+            <p>
+                <button type="submit">Kaydet</button>
+                <button type="reset">Temizle</button>
+            </p>
+
+        </form>
+    </section>
 </main>
 
 <footer>
     <p>Kampüs Etkinlikleri © 2026</p>
+    <p>Sahra Yavuz - 2321032034</p>
 </footer>
 
 </body>
